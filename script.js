@@ -83,6 +83,12 @@ function game() {
             computerSelection = computerPlay();
         }
     }
+    if (wins > losses)
+        console.log("YOU WON THE GAME!!!");
+    else if (wins < losses)
+        console.log("YOU LOST THE GAME!!!");
+    else
+        console.log("IT'S A DRAW!!!");
 }
 //player selection
 let playerSelection = prompt("ROCK, PAPER, SCISSORS?").toUpperCase();
