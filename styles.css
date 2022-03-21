@@ -1,0 +1,56 @@
+* {
+    font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+}
+body, .choices, .choice, .text {
+    display: flex;
+}
+body {
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TEXTS */
+.visuals, .roundResult{
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.visuals{
+    font-size: 10rem;
+    font-weight: bold;
+}
+.roundResult {
+    font-size: 1.5rem;
+}
+
+.texts{
+    margin-bottom: 100px;
+}
+
+/* CHOICES */
+.choices, .choice{
+    align-items: center;
+}
+.choices {
+    justify-content: space-evenly;
+}
+
+.choice{
+    font-size: 3rem;
+    padding: 50px;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 25px;
+    transition: 0.5s ease-in-out;
+}
+.choice:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+.img{
+    width: 250px;
+    margin-bottom: 20px;
+}
