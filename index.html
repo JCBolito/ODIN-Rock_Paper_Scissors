@@ -2,33 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="styles.css">
+	<title>Document</title>
 </head>
 
 <body>
-    <div class="texts">
-        <div class="visuals">ROCK</div>
-        <div class="roundResult">Lorem ipsum dolor sit amet.</div>
-    </div>
-    <div class="choices">
-        <button class="choice" id="ROCK">
-            <img src="./img/rock.png" alt="ROCK" class="img">
-            ROCK
-        </button>
-        <button class="choice" id="PAPER">
-            <img src="./img/paper.png" alt="PAPER" class="img">
-            PAPER
-        </button>
-        <button class="choice" id="SCISSORS">
-            <img src="./img/scissors.png" alt="SCISSORS" class="img">
-            SCISSORS
-        </button>
-    </div>
+	<div class="texts">
+		<div class="visuals">ROCK, PAPER, SCISSORS! SHOOT!</div>
+		<div class="scores">
+			<div class="playerScore">PLAYER: 0</div>
+			<div class="computerScore">COMPUTER: 0</div>
+		</div>
+	</div>
+
+	<div class="choices">
+		<button class="choice" id="ROCK">
+			<img src="./img/rock.png" alt="ROCK" class="img">
+			ROCK
+		</button>
+		<button class="choice" id="PAPER">
+			<img src="./img/paper.png" alt="PAPER" class="img">
+			PAPER
+		</button>
+		<button class="choice" id="SCISSORS">
+			<img src="./img/scissors.png" alt="SCISSORS" class="img">
+			SCISSORS
+		</button>
+	</div>
+
+	<div class="res-container">
+		<button class="restart">
+			<img src="./img/restart.png" class="res-img" alt="RESTART">
+		</button>
+	</div>
 </body>
 
 </html>

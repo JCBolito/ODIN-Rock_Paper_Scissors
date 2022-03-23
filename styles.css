@@ -1,7 +1,7 @@
 * {
     font-family: "Century Gothic", Arial, Helvetica, sans-serif;
 }
-body, .choices, .choice, .text {
+body, .choices, .choice, .scores, .res-container {
     display: flex;
 }
 body {
@@ -12,21 +12,28 @@ body {
 }
 
 /* TEXTS */
-.visuals, .roundResult{
-    justify-content: center;
-    text-align: center;
-    transition: 0.5s ease-in-out;
-}
-.visuals{
-    font-size: 10rem;
-    font-weight: bold;
-}
-.roundResult {
-    font-size: 1.5rem;
+.texts{
+    margin-bottom: 50px;
 }
 
-.texts{
-    margin-bottom: 100px;
+.visuals{
+    justify-content: center;
+    text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.scores{
+	justify-content: space-evenly;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.win{
+	color: rgb(0, 187, 0);
+}
+
+.lose{
+	color: rgb(168, 34, 0);
 }
 
 /* CHOICES */
@@ -39,12 +46,14 @@ body {
 
 .choice{
     font-size: 3rem;
+	font-weight: bold;
     padding: 50px;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border: 0;
     border-radius: 25px;
     transition: 0.5s ease-in-out;
+    
 }
 .choice:hover{
     transform: scale(1.1);
@@ -53,4 +62,33 @@ body {
 .img{
     width: 250px;
     margin-bottom: 20px;
+}
+.res-container{
+	justify-content: center;
+	margin-top: 50px;
+	transition: 0.5s ease-in-out;
+	display: none;
+}
+.restart{
+	border: 0;
+	background: none;
+	transition: 0.2s ease-in-out;
+}
+.restart:hover{
+	transform: scale(1.1);
+	transition: 0.2s ease-in-out;
+}
+.res-img{
+	width: 100px;
+	height: 100px;
+}
+
+@media only screen and (max-width: 1150px) {
+	/* For mobile phones: */
+	.choices {
+	  	flex-direction: column;
+	}
+	.choice {
+		margin-bottom: 50px;
+	}
 }
