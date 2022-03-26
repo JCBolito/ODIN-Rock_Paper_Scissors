@@ -1,31 +1,37 @@
 * {
     font-family: "Century Gothic", Arial, Helvetica, sans-serif;
 }
+html{
+	margin: 0;
+	overflow: hidden;
+}
 body, .choices, .choice, .scores, .res-container {
     display: flex;
 }
 body {
     background-color: rgb(230, 230, 230);
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
+	gap: 3vh;
+	overflow: auto;
 }
 
 /* TEXTS */
-.texts{
-    margin-bottom: 50px;
-}
 
+.visuals, .playerScore, .computerScore {
+	margin: 0;
+}
 .visuals{
     justify-content: center;
     text-align: center;
-	font-size: 2rem;
+	font-size: calc(0.9rem + 1.5vw);
 	font-weight: bold;
 }
 .scores{
-	justify-content: space-evenly;
-	font-weight: bold;
-	font-size: 1.5rem;
+	justify-content: center;
+	gap: 5vh;
+	font-size: calc(0.6rem + 1.5vw);
 }
 
 .win{
@@ -41,54 +47,43 @@ body {
     align-items: center;
 }
 .choices {
-    justify-content: space-evenly;
+    justify-content: center;
+	gap: 3vh;
+	flex-wrap: wrap;
 }
 
 .choice{
-    font-size: 3rem;
+    font-size: calc(0.5rem + 1vw);
 	font-weight: bold;
-    padding: 50px;
+    padding: 2vh;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border: 0;
     border-radius: 25px;
-    transition: 0.5s ease-in-out;
-    
+    transition: 0.15s ease-in-out;
 }
 .choice:hover{
     transform: scale(1.1);
-    transition: 0.2s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 .img{
-    width: 250px;
-    margin-bottom: 20px;
+	height: 15vh;
+    margin-bottom: 2vh;
 }
 .res-container{
 	justify-content: center;
-	margin-top: 50px;
-	transition: 0.5s ease-in-out;
+	margin: 1vh;
 	display: none;
 }
 .restart{
 	border: 0;
 	background: none;
-	transition: 0.2s ease-in-out;
+	transition: 0.15s ease-in-out;
 }
 .restart:hover{
 	transform: scale(1.1);
-	transition: 0.2s ease-in-out;
+	transition: 0.15s ease-in-out;
 }
 .res-img{
-	width: 100px;
-	height: 100px;
-}
-
-@media only screen and (max-width: 1150px) {
-	/* For mobile phones: */
-	.choices {
-	  	flex-direction: column;
-	}
-	.choice {
-		margin-bottom: 50px;
-	}
+	height: 5vh;
 }
